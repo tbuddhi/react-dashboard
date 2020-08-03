@@ -1,6 +1,7 @@
 import React from 'react'
 import { Nav } from 'react-bootstrap';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom'
 
 const NavWrapper = styled.div`
     display: block;
@@ -41,20 +42,16 @@ const MainNavs = () => {
         <NavWrapper>
            <Nav className="justify-content-end" activeKey="/attitude">
                 <Nav.Item>
-                    <Nav.Link href="/overview">Overview</Nav.Link>
-                    {/* <Link to="/overview">Overview</Link> */}
+                    <NavLink to="/overview" className="nav-link" activeClassName="active">Overview</NavLink>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="/identity">Identity</Nav.Link>
-                    {/* <Link to="/identity">Identity</Link> */}
+                    <NavLink className="nav-link" to="/identity">Identity</NavLink>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link className="active" href="/attitude">Attitude</Nav.Link>
-                    {/* <Link  to="/attitude">Attitude</Link> */}
+                    <NavLink className="nav-link" to="/attitude">Attitude</NavLink>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="/interests">Interests</Nav.Link>
-                    {/* <Link to="/interests">Interests</Link> */}
+                    <NavLink className="nav-link" to="/interests">Interests</NavLink>
                 </Nav.Item>
             </Nav>
         </NavWrapper>
