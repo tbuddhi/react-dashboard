@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 import MainNavs from './MainNavs'
 import SearchNavs from './SearchNavs'
@@ -35,8 +36,8 @@ const Header = () => {
     return(
         <header>
             <TopNav>                
-                <UserIcon href="">
-                    <img src={UserImg} alt="Profile" />
+                <UserIcon >
+                    <Link to="/"><img src={UserImg} alt="Profile" /></Link>
                 </UserIcon>
                 <Container className="h-100">
                     <Row className="h-100">
